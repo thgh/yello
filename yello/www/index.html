@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Yello</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/jquery-mobile-theme.min.css" />
+  <link rel="stylesheet" href="css/screen.css" />
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-mobile.min.js"></script>
+</head>
+<body>
+
+  <div data-role="page" id="home">
+    <div data-role="header" data-position="fixed" data-tap-toggle="false">
+      <a href="#home" data-role="none" class="logo"><img src="img/home.png"></a>
+      <a href="#settings" data-role="none" class="settings"><img src="img/cog.png" ></a>
+      <h1>Yello</h1>
+    </div>
+    <div data-role="content" class="home">
+      <div class="inp-border">
+        <button type="button" class="btn-push"></button> 
+        <div class="inp-push">
+          <input type="text" id="push" placeholder="What do you want to talk about?" />
+        </div>
+      </div>
+      <ul data-role="listview" class="notif">
+        <li><span class="time">12:59</span><span>Mom</span><div>Work is not nice</div></li>
+        <li><span class="time">16:08</span><span>Uncle Johnny</span></li>
+        <li><span class="time">Sunday</span><span>Steve Jobs</span><div>Doing Spanish class</div></li>
+        <li><span class="time">Saturday</span><span>Judy</span><div>Headache</div></li>
+      </ul>
+      <ul data-role="listview" class="contacts-push" style="display:none" data-icon="false">
+        <li><img src="img/photo/cousin.png"><i></i>Cousin</li>
+        <li><img src="img/photo/cousin2.png"><i></i>Cousin Elliot</li>
+        <li><img src="img/photo/dad.png"><i></i>Dad</li>
+        <li><img src="img/photo/grandma.png"><i></i>Grandma</li>
+        <li><img src="img/photo/grandpa.png"><i></i>Grandpa</li>
+        <li><img src="img/photo/mom.png"><i></i>Mom</li>
+        <li><img src="img/photo/uncle.jpg"><i></i>Uncle</li>
+      </ul>
+    </div>
+    <div data-role="footer" data-id="myfooter" data-position="fixed" data-tap-toggle="false">
+      <div data-role="navbar" class="nav-lg">
+        <ul>
+          <li><a href="#contacts" class="icon icon-users">Contacts</a></li>
+          <li><a href="#calllist" class="icon icon-phone">Calllist</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div data-role="page" id="contacts">
+    <div data-role="content">
+      <button type="button" class="btn-push"></button> 
+      <div class="inp-push">Text here</div>
+
+      <ul data-role="listview">
+        <li><a href="#sent">Mom</a><a href="#" data-icon="star">Options</a></li>
+        <li><a href="#sent">Uncle Johnny</a><a href="#" data-icon="star">Options</a></li>
+        <li><a href="#sent">Steve Jobs</a><a href="#" data-icon="star">Options</a></li>
+        <li><a href="#sent">Judy</a><a href="#" data-icon="star">Options</a></li>
+      </ul>
+    </div>
+    <div data-role="footer" data-id="myfooter" data-position="fixed" data-tap-toggle="false">
+      <div data-role="navbar" class="nav-lg">
+        <ul>
+          <li><a href="#handsfree" class="icon icon-voice">Handsfree</a></li>
+          <li><a href="#home" class="icon icon-home">Home</a></li>
+          <li><a href="#contacts" class="icon icon-users">Contacts</a></li>
+          <li><a href="#calllist" class="icon icon-phone">Calllist</a></li>
+          <li><a href="#settings" class="icon icon-cog">Settings</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <div data-role="page" id="sent">
+    <div data-role="header">
+      <a href="#home" data-role="none" class="logo"><img src="img/home.png"></a>
+      <a href="#settings" data-role="none" class="settings"><img src="img/cog.png" ></a>
+      <h1>Sent</h1>
+    </div>
+    <div data-role="content">
+      <h2>Sent!</h2>
+    </div>
+  </div>
+
+
+  <div data-role="page" id="handsfree">
+    <div data-role="content">
+      <p>
+        <label for="speech">
+          Speech now or keep your silence forever
+        </label>
+        <input type="text" id="speech" x-webkit-speech />
+      </p>
+    </div>
+    <div data-role="footer" data-id="myfooter" data-position="fixed" data-tap-toggle="false">
+      <a href="#home" data-icon="back">Home</a>
+    </div>
+  </div>
+
+
+  <div data-role="page" id="settings">
+    <div data-role="header">
+      <a href="#home" data-role="none" class="logo"><img src="img/home.png"></a>
+      <a href="#settings" data-role="none" class="settings"><img src="img/cog.png" ></a>
+      <h1>Settings</h1>
+    </div>
+    <div data-role="content">
+      <ul data-role="listview">
+        <li data-icon="alert"><a href="#settings-notif">Notifications</a></li>
+        <li data-icon="plus"><a href="#settings-share">Tell your family</a></li>
+        <li data-icon="star"><a href="#sent">About</a></li>
+        <li data-icon="info"><a href="#sent">Help</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="page" id="settings-notif">
+    <div data-role="header">
+      <a href="#home" data-role="none" class="logo"><img src="img/home.png"></a>
+      <a href="#settings" data-role="none" class="settings"><img src="img/cog.png" ></a>
+      <h1>Settings</h1>
+    </div>
+    <div data-role="content">
+      <ul data-role="listview" data-icon="false">
+        <li>
+          <label for="flip-1">Push notifications</label>
+          <select name="flip-1" id="flip-1" data-role="slider">
+            <option value="off">Switch Off</option>
+            <option value="on">Switch On</option>
+          </select>
+        </li>
+        <li>
+          Sound level
+          <input type="range" name="slider-mini" id="slider-mini" value="8" min="1" max="10" data-highlight="true" />
+        </li>
+        <li>
+          <label for="select-choice-min" class="select">Notification tune</label>
+          <select name="select-choice-min" id="select-choice-min" data-mini="true">
+            <option value="standard">What what. In the but.</option>
+            <option value="rush">More</option>
+            <option value="express">Yeah right</option>
+          </select> 
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div data-role="page" id="settings-share">
+    <div data-role="header">
+      <a href="#home" data-role="none" class="logo"><img src="img/home.png"></a>
+      <a href="#settings" data-role="none" class="settings"><img src="img/cog.png" ></a>
+      <h1>Settings</h1>
+    </div>
+    <div data-role="content">
+      <ul data-role="listview">
+        <li><a href="#home">E-mail</a></li>
+        <li><a href="#home">SMS</a></li>
+        <li><a href="#home">WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+// SpeechInputEvent
+var speech = document.getElementById('speech');
+speech.onfocus = speech.blur;
+speech.onwebkitspeechchange = function(e) {
+  console.log(e);
+  console.log(speech.value);
+  document.getElementById('txt').value = speech.value;  
+};
+$('.inp-push input').on('keyup', function() {
+  if($(this).val()){
+    $('.notif').slideUp();
+    $('.contacts-push').slideDown();
+    $('.btn-push').addClass('active');
+  }
+  else{
+    $('.notif').slideDown();
+    $('.contacts-push').slideUp();
+    $('.btn-push').removeClass('active');
+  }
+});
+$('.btn-push').on('click', function() {
+  $.mobile.changePage($('#sent'), {transition: 'slide'}, false, true);
+  $('#push').val('');
+  $('.notif').slideDown();
+  $('.contacts-push').slideUp();
+  $('.btn-push').removeClass('active');
+
+  setTimeout(function() {
+    $.mobile.changePage($('#home'), {transition: 'slide'}, false, true);
+  }, 2000);
+});
+$('.contacts-push li').on('click', function(e) {
+  var a = $(this);
+  e.preventDefault();
+  e.stopPropagation();
+  a.toggleClass('active');
+});
+$('a').on('click', function(e) {
+  var a = $(this);
+  e.preventDefault();
+  e.stopPropagation();
+  console.log('sdf')
+  if(a.hasClass('logo')){
+    console.log('back');
+    $('.notif').slideDown();
+    $('.contacts-push').slideUp();
+    $('.btn-push').removeClass('active');
+    $.mobile.changePage($(a.attr('href')), {transition: 'slide',
+      reverse: true}, true, true);
+  }
+  else{
+    console.log('else')
+    $.mobile.changePage($(a.attr('href')),  {transition: 'slide'}, false, true);
+  }
+});
+
+/*
+
+$('div.ui-page').on('swipeleft', function(){
+  var nextpage = $(this).next('div[data-role="page"]');
+  if (nextpage.length > 0) {
+    $.mobile.changePage(nextpage,  {transition: 'slide'}, false, true);
+  }
+});
+$('div.ui-page').on('swiperight', function(){
+  var prevpage = $(this).prev('div[data-role="page"]');
+  if (prevpage.length > 0) {
+    $.mobile.changePage(prevpage, {transition: 'slide',
+      reverse: true}, true, true);
+  }
+});
+
+// Find the right method, call on correct element
+function launchFullscreen(element) {
+  if(element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if(element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if(element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  } else if(element.msRequestFullscreen) {
+    element.msRequestFullscreen();
+  }
+}
+// Launch fullscreen for browsers that support it!
+launchFullScreen(document.documentElement);
+
+// Whack fullscreen
+function exitFullscreen() {
+  if(document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if(document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if(document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  }
+}
+
+// Cancel fullscreen for browsers that support it!
+exitFullscreen();*/
+</script>
+</body>
+</html>
